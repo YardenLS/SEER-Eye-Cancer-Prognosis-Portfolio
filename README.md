@@ -35,5 +35,22 @@ Is there a statistically significant association between the primary treatment m
   There is a **statistically significant association** between the treatment type and the clinical outcome status. The outcome distribution differs across treatment modalities.
   $$H_1: \text{Treatment Type} \not\perp \text{Outcome Status}$$
 
-### Methodological Note on Statistical Assumptions
-Because both target variables (`Treatment_Type` and `Outcome_Status`) are categorical (nominal), normality tests (such as Kolmogorov-Smirnov or Shapiro-Wilk) are **not applicable**. Instead, the evaluation relies on a **Pearson's Chi-Square Test of Independence ($\chi^2$)**, ensuring that expected cell frequencies meet the mandatory threshold ($\ge 5$ in at least 80% of cells).
+## 📊 Statistical Methodology & Assumptions
+
+To evaluate the association between the primary treatment modality (`Treatment_Type`) and the clinical outcome status (`Outcome_Status`), the following statistical framework was implemented:
+
+### 1. Statistical Test Selection
+* **Test Used:** Pearson's Chi-Square Test of Independence ($\chi^2$).
+* **Variable Type:** Both variables are categorical (nominal), making the Chi-Square test the appropriate inferential method to test whether the distribution of clinical outcomes is independent of the treatment type administered.
+
+### 2. Observed vs. Expected Frequencies
+The Chi-Square statistic is computed by comparing the **Observed Frequencies ($O$)**—the actual patient counts recorded in each cell of the cross-tabulation—against the **Expected Frequencies ($E$)** under the null hypothesis ($H_0$):
+
+$$E = \frac{\text{Row Total} \times \text{Column Total}}{\text{Grand Total}}$$
+
+The expected frequencies represent the theoretical cell counts expected if there were absolute independence between treatment and outcome (i.e., if distribution was purely random).
+
+### 3. Methodological Assumptions & Quality Control
+To ensure the validity of the Chi-Square approximation:
+* **Expected Cell Counts:** Checked that expected frequencies meet standard statistical thresholds ($\ge 5$ in at least 80% of cells, with no expected counts dropping below 1).
+* **Handling Sparse Data:** In instances where small sample subsets or rare treatments resulted in sparse cells, alternative exact tests (such as **Fisher's Exact Test**) are considered to prevent distorted p-value approximations.
