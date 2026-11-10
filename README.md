@@ -29,11 +29,9 @@ Is there a statistically significant association between the primary treatment m
 
 * **Null Hypothesis ($H_0$):** 
   There is **no association** between the treatment type and the clinical outcome status. The outcome distribution is independent of the treatment modality administered.
-  $$H_0: \text{Treatment Type} \perp \text{Outcome Status}$$
-
+  
 * **Alternative Hypothesis ($H_1$):** 
   There is a **statistically significant association** between the treatment type and the clinical outcome status. The outcome distribution differs across treatment modalities.
-  $$H_1: \text{Treatment Type} \not\perp \text{Outcome Status}$$
 
 ## 📊 Statistical Methodology & Assumptions
 
