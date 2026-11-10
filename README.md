@@ -23,8 +23,6 @@ To prepare the raw clinical registry dataset (`eye_cancer_seer_final.csv`) for r
 ### Primary Research Question
 Is there a statistically significant association between the primary treatment modality (`Treatment_Type`) and the final clinical outcome status (`Outcome_Status`) in patients with ocular cancer?
 
----
-
 ### Statistical Hypotheses
 
 * **Null Hypothesis ($H_0$):** 
@@ -67,3 +65,25 @@ To ensure the validity of the Chi-Square approximation:
 ### 3. Study Limitations & Future Directions
 * **Confounding Variables:** In real-world clinical datasets, treatment allocation is rarely randomized; patients often receive specific treatments based on baseline disease stage, comorbidities, or overall prognosis, which may introduce confounding factors.
 * **Multivariate Analysis:** Future iterations of this portfolio project could expand this analysis by controlling for potential confounders (such as baseline tumor stage or patient age) using multivariate logistic regression or survival analysis models.
+
+## 📈 Data Visualization
+
+### 1. Clustered Bar Chart Distribution
+The visual distribution of patient counts across the primary treatment modalities and clinical outcomes is illustrated below:
+
+![Treatment Modality vs Clinical Outcome Status](outputs/treatment_vs_outcome_graph.png)
+*(Figure 1: Clustered bar chart comparing clinical outcome distributions across Chemotherapy, Radiation, and Surgery)*
+
+### 2. Statistical Findings & Interpretation
+* **Significance Level:** The analysis yielded an asymptotic significance (p-value) of approximately **$p \approx 0.30$** ($p > 0.05$).
+* **Statistical Decision:** Because the p-value exceeds the standard significance threshold ($\alpha = 0.05$), **we fail to reject the null hypothesis ($H_0$)**.
+* **Clinical Implication:** The proportion of patients categorized as *Active*, *Deceased*, or *In Remission* remains remarkably consistent regardless of whether they received chemotherapy, radiation, or surgery as their primary treatment. There is **no statistically significant association** between the primary treatment modality and the final clinical outcome status within this dataset.
+
+---
+
+## ⚠️ Study Limitations
+* **Confounding Variables:** Treatment allocation in clinical datasets is rarely randomized; patients often receive specific treatments based on baseline disease stage or comorbidities, introducing potential confounding factors.
+* **Future Directions:** Future portfolio iterations will expand this analysis by controlling for confounders using multivariate modeling or transitioning the insights into an interactive **Power BI Dashboard**.
+
+---
+
