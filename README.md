@@ -10,4 +10,13 @@ The analysis is based on a structured ocular oncology dataset (eye_cancer_seer_f
 
 🛠️ Methodology & SPSS Implementation Highlights
 
-* **Data Management & Cleaning**: Handling missing data, variable recoding, and syntax automation (.sps scripts) to ensure high data integrity standard in clinical trials.
+## 🧹 Data Cleaning & Preprocessing (Data Management)
+
+To prepare the raw clinical registry dataset (`eye_cancer_seer_final.csv`) for rigorous statistical analysis in SPSS, standard clinical data management and cleaning procedures were executed:
+
+*   **Identifier Management:** Preserved authentic patient-level alphanumeric identifiers (`Patient_ID` in `PID000xx` format) to maintain standard healthcare registry integrity and prevent merging errors.
+*   **Variable Recoding & Binary Encoding:** 
+    *   **Gender:** Recoded categorical gender values into binary numerical format (`0` = Male, `1` = Female) to facilitate multivariate regression modeling.
+    *   **Surgery Status:** Converted logical boolean indicators (`True`/`False`) into binary indicator variables (`0` = No Surgery, `1` = Surgery Performed).
+    *   **Family History:** Standardized family history indicators into binary numeric format (`0` = No Family History, `1` = Positive Family History).
+*   **Clinical & Outcome Structuring:** Verified measurement scales (Nominal, Ordinal, and Scale) across all variables, ensuring proper data types for descriptive statistics, subgroup comparisons, and time-to-event survival analysis (`Survival_Time_Months` and `Outcome_Status`).
